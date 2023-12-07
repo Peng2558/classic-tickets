@@ -26,6 +26,7 @@ module.exports = {
   async function deleteReview(req, res) {
     // Note the cool "dot" syntax to query on the property of a subdoc
     const performance = await Performance.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+      
     // Rogue user!
     if (!performance) return res.redirect('/performances');
     // Remove the review using the remove method available on Mongoose arrays

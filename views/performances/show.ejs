@@ -19,6 +19,7 @@
     <option value="5" selected>5</option>
 
   <input type="submit" value="Add Review">
+</form>
 <% if (performance.reviews.length) { %>
     <table>
       <thead>
@@ -41,8 +42,11 @@
             <td><%= r.rating %></td>
             <td>
               <% if (user?._id.equals(r.user)) { %>
-                <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                  <button type="submit">X</button>
+                <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST" style="display: inline;">
+                    <button type="submit">X</button>
+                  </form>
+                  <form action="/reviews/<%= r._id %>?_method=EDIT" method="POST" style="display: inline;">
+                    <button type="submit">Edit</button>
                 </form>
               <% } %>
             </td>
