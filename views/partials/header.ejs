@@ -10,12 +10,12 @@
 <body>
   <nav>
    
-    <a href="/performances" <%- title === 'All Performances' ? 'class="active"' : '' %>>ALL Performances</a>
+    <a href="/performances" <%- title === 'All Purchased Tickets' ? 'class="active"' : '' %>>All Purchased Tickets</a>
     <% if (user) { %>  
       <a href="/performances/new" <%- title === 'Buy Ticket' ? 'class="active"' : '' %>>Buy Ticket</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
-      <a href="/auth/google" class="login">LOG IN</a>
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
       <!-- &nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a> -->
     <% } %>
   </nav>

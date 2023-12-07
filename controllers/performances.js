@@ -10,7 +10,7 @@ module.exports = {
 
 async function index(req, res) {
   const performances = await Performance.find({});
-  res.render('performances/index', { title: 'All Performances', performances });
+  res.render('performances/index', { title: 'All Purchased Tickets', performances });
 }
 
 async function show(req, res) {

@@ -6,8 +6,9 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 const methodOverride = require('method-override');
+const  ensureLoggedIn =  require('./config/ensureLoggedIn');
 
-//const User = require('../models/user');
+
 
 
 require('dotenv').config();
@@ -15,6 +16,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
+const reviewsRouter = require('./routes/reviews');
 var performancesRouter = require('./routes/performances');
 
 var app = express();
@@ -45,6 +47,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/performances', performancesRouter);
+app.use('/',ensureLoggedIn, reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
