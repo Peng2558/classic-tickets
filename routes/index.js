@@ -5,7 +5,8 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+ // res.render('index', { title: 'Express' });
+ res.redirect('/performances');
 });
 
 // Google OAuth login route
@@ -23,14 +24,14 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/',
-    failureRedirect: '/'
+    successRedirect: '/performances',
+    failureRedirect: '/performances'
   }
 ));
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout(function() {
-    res.redirect('/');
+    res.redirect('/performances');
   });
 });
 module.exports = router;

@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+<table id="list">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Performance Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% performances.forEach(function(p) { %>
+      <tr>
+        <td><%= p.title %></td> 
+        <td><%= p.performanceDate %></td>
+         <td><a href="/performances/<%= p._id %>">DETAILS</a></td> 
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+
+<%- include('../partials/footer') %>
+    
+

@@ -15,7 +15,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-//var moviesRouter = require('./routes/movies');
+var performancesRouter = require('./routes/performances');
 
 var app = express();
 
@@ -44,7 +44,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-//app.use('/movies', moviesRouter);
+app.use('/performances', performancesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
