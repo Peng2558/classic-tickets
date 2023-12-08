@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const performancesCtrl = require('../controllers/performances');
-
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 // Require the auth middleware
 //const ensureLoggedIn = require('../config/ensureLoggedIn');
 	
@@ -12,8 +12,9 @@ const performancesCtrl = require('../controllers/performances');
 // });
 // GET /performances
 router.get('/', performancesCtrl.index);
-router.get('/new', performancesCtrl.new);
+router.get('/new',ensureLoggedIn, performancesCtrl.new);
 router.get('/:id', performancesCtrl.show);
 
-router.post('/', performancesCtrl.create);
+router.post('/',ensureLoggedIn, performancesCtrl.create);
+router.get('/:id/edit',ensureLoggedIn, performancesCtrl.edit);//new for test
 module.exports = router;

@@ -1,11 +1,12 @@
 const Performance = require('../models/performance');
-const Performer = require('../models/performer');
+//const Performer = require('../models/performer');
 
 module.exports = {
   index,
   show,
  new:newPerformance,
- create
+ create,
+ edit
 };
 
 async function index(req, res) {
@@ -43,6 +44,12 @@ async function create(req, res) {
   } catch (err) {
     // Typically some sort of validation error
     console.log(err);
-    res.render('performances/new', { errorMsg: err.message });
+    res.render('performances/new', { title: 'Buy Ticket', errorMsg: '' });//{ errorMsg: err.message });
   }
 }
+ async function edit(req,res){
+
+
+  res.render('performances/edit', { title: 'Edit Review', errorMsg: '' });
+
+ }

@@ -21,8 +21,8 @@ a {
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
- 
+  color: #424748; 
+  
 }
 
 body {
@@ -51,13 +51,19 @@ nav > img {
 }
 
 body > main {
+  /* background-image: url('https://unsplash.com/photos/uv7GX8t7bJ4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTJ8fGNsYXNzaWNhbCUyMGNvbmNlcnR8ZW58MHx8fHwxNzAxOTkwNDU3fDA&force=true'); /* Path to your image */
+  /* background-size: cover;   */
+  /* background-repeat: no-repeat;  */
+  /* background-attachment: fixed;  */
+  /* background-position: center center; */
   grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-color: #E8ECEB;  
   padding: 20px;
   overflow-y: scroll;
+ 
 }
 
 body > main h1:first-child {
@@ -107,7 +113,7 @@ table {
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid #424748;  
 }
 
 table td {
@@ -121,7 +127,8 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+   background-color: #B8C0C2; 
+  /* background-color: #5fa6ed; */
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -164,13 +171,13 @@ hr {
   flex-wrap: wrap;
   /* padding: 1rem; */
   width: 80%;
-  border: 2px solid #B8C0C2;
+  border: 2px solid #B8C0C2; 
   border-radius: .5rem;
   margin: .5rem 0 2rem;
 }
 
 .badge {
-  background-color: #B8C0C2;
+  background-color: #B8C0C2; 
   padding: .5rem;
   margin: .5rem;
   border-radius: .3rem;

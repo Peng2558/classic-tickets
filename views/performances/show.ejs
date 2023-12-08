@@ -44,12 +44,14 @@
               <% if (user?._id.equals(r.user)) { %>
                 <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST" style="display: inline;">
                     <button type="submit">X</button>
-                  </form>
-                  <form action="/reviews/<%= r._id %>?_method=EDIT" method="POST" style="display: inline;">
+                  <!-- </form>
+                  <form action="/performances/<%= performance._id %>?_method=EDIT" method="POST" style="display: inline;">
                     <button type="submit">Edit</button>
-                </form>
+                </form> -->
+                <a href="/performances/<%= performance._id %>/edit">Edit</a>
               <% } %>
             </td>
+            <!-- <a href="/performances/<%= performance._id %>/edit">Edit Todo</a> -->
           </tr>
         <% }); %>
         <tr>

@@ -2,7 +2,8 @@ const Performance = require('../models/performance');
 
 module.exports = {
     create,
-    delete: deleteReview
+    delete: deleteReview,
+    edit
 
   };
   async function create(req, res) {
@@ -35,4 +36,13 @@ module.exports = {
     await  performance.save();
     // Redirect back to the movie's show view
     res.redirect(`/performances/${performance._id}`);
+  }
+  async function edit(req,res){
+   
+    const performance = await Performance.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+    if (!performance) return res.redirect('/performances');
+    performance.reviews.update(req.params.id);
+    await  performance.save();
+    res.redirect(`/performances/${performance._id}`);
+
   }

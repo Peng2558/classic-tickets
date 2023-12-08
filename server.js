@@ -6,7 +6,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 const methodOverride = require('method-override');
-const  ensureLoggedIn =  require('./config/ensureLoggedIn');
+
 
 
 
@@ -16,9 +16,9 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-const reviewsRouter = require('./routes/reviews');
 var performancesRouter = require('./routes/performances');
-
+const reviewsRouter = require('./routes/reviews');
+const  ensureLoggedIn =  require('./config/ensureLoggedIn');
 var app = express();
 
 // view engine setup
