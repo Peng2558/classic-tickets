@@ -2,9 +2,11 @@
 <%- include('../partials/header') %>
 
   <form id="add-review-form" method="POST"
-  action="/performances/<%= performance._id %>/reviews">
+  action="/performances/<%= review._id %>/reviews">
   <label>Review:</label>
-  <textarea name="content"></textarea>
+  <textarea name="content">
+    <%= review.content %>
+  </textarea>
   <label>Rating:</label>
   <select name="rating">
     <option value="1">1</option>
@@ -13,6 +15,7 @@
     <option value="4">4</option>
     <option value="5" selected>5</option>
 
-  <input type="submit" value="Edit Review">
+  <input type="submit" value="Save Changes">
 </form>
+
 <%- include('../partials/footer') %>

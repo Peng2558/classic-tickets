@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(107, 137, 171);
+  /* background-color: rgb(107, 137, 171); */
 }
 
 a {
@@ -26,6 +26,7 @@ a {
 }
 
 body {
+   background-color: rgb(107, 137, 171); 
   margin: 0;
   height: 100vh;
   display: grid;
@@ -38,6 +39,7 @@ body {
 body > nav {
   grid-area: nav;
   background-color: #B8C0C2;
+  /* background-color: rgb(107, 137, 171); nav bar*/
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -61,6 +63,7 @@ body > main {
   flex-direction: column;
   align-items: center;
   background-color: #E8ECEB;  
+  /* background-color: rgb(107, 137, 171); main page*/
   padding: 20px;
   overflow-y: scroll;
  

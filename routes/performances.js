@@ -16,5 +16,5 @@ router.get('/new',ensureLoggedIn, performancesCtrl.new);
 router.get('/:id', performancesCtrl.show);
 
 router.post('/',ensureLoggedIn, performancesCtrl.create);
-router.get('/:id/edit',ensureLoggedIn, performancesCtrl.edit);//new for test
+//router.get('/:id/edit',ensureLoggedIn, performancesCtrl.edit);//new for test
 module.exports = router;
