@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+
 <%- include('../partials/header') %>
 
-  <form id="add-review-form" method="POST"
-  action="/performances/<%= review._id %>/reviews">
+  <!-- <form id="add-review-form" method="PUT"
+  action="/reviews/<%= review._id %>"> -->
+  <form id="add-review-form" action="/reviews/<%= review._id %>?_method=PUT" method="POST">
   <label>Review:</label>
   <textarea name="content">
     <%= review.content %>

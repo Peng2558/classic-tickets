@@ -3,8 +3,8 @@ const Performance = require('../models/performance');
 module.exports = {
     create,
     delete: deleteReview,
-    edit
-   // update
+    edit,
+    update:updateReview
 
   };
   async function create(req, res) {
@@ -31,15 +31,7 @@ module.exports = {
     await  performance.save();
     res.redirect(`/performances/${performance._id}`);
   }
-  async function update(req,res){
-   
-    // const performance = await Performance.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
-    // if (!performance) return res.redirect('/performances');
-    // performance.reviews.update(req.params.id);
-    // await  performance.save();
-    // res.redirect(`/performances/${performance._id}`);
-
-  }
+  
   async function edit(req, res) {
     try {
     
@@ -50,4 +42,21 @@ module.exports = {
         console.error(err);
     
     }
+}
+async function updateReview(req,res){
+  
+  try {
+   
+    const performance = await Performance.findOne({'reviews._id': req.params.id});
+    const review = performance.reviews.id(req.params.id);
+    review.content = req.body.content;
+    review.rating = req.body.rating;
+    await performance.save();
+    res.redirect(`/performances/${performance._id}`);
+  } catch (err) {
+    console.error(err);
+  }
+
+
+
 }

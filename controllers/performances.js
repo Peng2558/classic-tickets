@@ -1,12 +1,12 @@
 const Performance = require('../models/performance');
-//const Performer = require('../models/performer');
+
 
 module.exports = {
   index,
   show,
  new:newPerformance,
  create
- //edit
+ 
 };
 
 async function index(req, res) {
