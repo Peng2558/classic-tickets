@@ -4,19 +4,19 @@
   <!-- <form id="add-review-form" method="PUT"
   action="/reviews/<%= review._id %>"> -->
   <form id="add-review-form" action="/reviews/<%= review._id %>?_method=PUT" method="POST">
-  <label>Review:</label>
-  <textarea name="content">
-    <%= review.content %>
-  </textarea>
-  <label>Rating:</label>
-  <select name="rating">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5" selected>5</option>
-
-  <input type="submit" value="Save Changes">
-</form>
+     <label>Review:</label>
+     <textarea name="content">
+     <%= review.content %>
+       </textarea>
+     <label>Rating:</label>
+     <select name="rating">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5" selected>5</option>
+       <input type="submit" value="Save Changes">
+     </select>
+  </form>
 
 <%- include('../partials/footer') %>
