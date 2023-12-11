@@ -33,6 +33,9 @@ You need to choose a specific violin concerto,a concert hall,soloist,date, and t
 ## Next Steps 
 Future updates aim to add more complexity to the data components to enhance the overall experience, making it more immersive and interactive.
 
+## Live Demo
+
+Experience the live version of Classic Tickets: [Try Classic Tickets Now!](https://github.com/Peng2558/classic-tickets)
 
 ## Screen Shot
 ![Screenshot 2023-12-10 at 10 27 51 PM](https://github.com/Peng2558/classic-tickets/assets/72111623/c0931a36-662d-47f9-8b7c-e2479b0e4061)
