@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
-<div>Title: <%= performance.title %> </div>
-<div>Soloist: <%= performance.soloist %> </div>
-<div>Concert Hall: <%= performance.concertHall %> </div>
-<div>Date: <%= performance.performanceDate %> </div>
+<div style="color: white;">Title: <%= performance.title %> </div>
+<div style="color: white;">Soloist: <%= performance.soloist %> </div>
+<div style="color: white;">Concert Hall: <%= performance.concertHall %> </div>
+<div style="color: white;">Date: <%= performance.performanceDate %> </div>
 </form>
 <% if(user)%>
-<br><br><h2>Reviews</h2>
+<br><br><h2 style="color: white;">Reviews</h2>
 <form id="add-review-form" method="POST"
   action="/performances/<%=  performance._id %>/reviews">
-  <label>Review:</label>
+  <label style="color: white;">Review:</label>
   <textarea name="content"></textarea>
-  <label>Rating:</label>
+  <label style="color: white;">Rating:</label>
   <select name="rating">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -45,7 +45,7 @@
                 <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST" style="display: inline;">
                     <button type="submit">X</button>
                 </form>
-                <a href="/reviews/edit/<%= r._id %>">Edit</a>
+                <a href="/reviews/edit/<%= r._id %>" style="color: white;" >Edit</a>
               <% } %>
             </td>
            
@@ -53,12 +53,12 @@
         <% }); %>
         <tr>
           <td colspan="3"></td>
-          <td><strong><%= (total / performance.reviews.length).toFixed(1) %></strong></td>
+          <td ><strong style="color: white;"><%= (total / performance.reviews.length).toFixed(1) %></strong></td>
         </tr>
       </tbody>
     </table>
   <% } else { %>
-    <h5>No Reviews Yet</h5>
+    <h5 style="color: white;">No Reviews Yet</h5>
   <% } %>
     
 <%- include('../partials/footer') %>
