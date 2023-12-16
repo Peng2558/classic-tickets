@@ -35,7 +35,7 @@ Future updates aim to add more complexity to the data components to enhance the 
 
 ## Live Demo
 
-Experience the live version of Classic Tickets: [Try Classic Tickets Now!](https://github.com/Peng2558/classic-tickets)
+Experience the live version of Classic Tickets: [Try Classic Tickets Now!](https://classic-tickets-59cba6a1e96c.herokuapp.com)
 
 ## Screen Shot
 ![Screenshot 2023-12-10 at 10 27 51 PM](https://github.com/Peng2558/classic-tickets/assets/72111623/3b90a8ef-55bb-40fd-80a9-61903eb915cb)
